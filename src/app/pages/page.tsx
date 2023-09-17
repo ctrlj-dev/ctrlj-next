@@ -1,8 +1,7 @@
-import { getPageData } from '@/lib/api';
+import { getAllPages } from "@/lib/graphql/queries";
 
-export default async function Page({ params }: { params: { slug: string, id: number } }) {
-    const data = await getPageData();
-
+export default async function Page() {
+    const data = await getAllPages();
     return (
         <div>
             <h1>Mis post</h1>

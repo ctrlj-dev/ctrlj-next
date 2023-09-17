@@ -1,4 +1,4 @@
-import { getPageBySlug } from '@/lib/api';
+import { getPageBySlug } from "@/lib/graphql/queries";
 
 export default async function Page({ params }: {
     params: {
