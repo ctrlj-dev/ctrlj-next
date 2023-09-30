@@ -7,3 +7,8 @@ export const FailedToFetchError = 'Failed to fetch API';
  * The error for API not defined.
  */
 export const ApiNotDefinedError = 'Api not defined';
+
+/**
+ * The error when data its not avaible
+ */
+export const NotAvailableData = 'Data does not exist';

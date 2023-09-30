@@ -1,11 +1,13 @@
 import fetchAPI from '../utils/api';
 import { GetAllPages } from '../queries/queries.graphql';
 import { print } from 'graphql/language/printer';
+import { GetAllPagesQuery, Page } from '@/@types/global.ts/graphql';
+import { pagesResponseToPages } from '../mappers/pages';
 
-async function getAllPages() {
+async function getAllPages(): Promise<Page[]> {
   const parseQuery = print(GetAllPages);
-  const data = await fetchAPI(parseQuery);
-  return data.pages.edges;
+  const response: GetAllPagesQuery = await fetchAPI(parseQuery);
+  return pagesResponseToPages(response);
 }
 
 export { getAllPages };
