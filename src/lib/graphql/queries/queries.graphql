@@ -1,0 +1,11 @@
+query GetAllPages {
+  pages {
+    edges {
+      node {
+        title
+        slug
+        content
+      }
+    }
+  }
+}

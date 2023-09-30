@@ -1,4 +1,4 @@
-import { getAllPages } from "@/lib/graphql/queries";
+import { getAllPages } from "@/lib/graphql/providers/pages";
 
 export default async function Page() {
     const data = await getAllPages();

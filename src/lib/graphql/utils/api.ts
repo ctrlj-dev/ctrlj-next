@@ -10,6 +10,7 @@ async function fetchAPI(query: DocumentNode | string, { variables }: Record<stri
     };
   }
 
+
   // WPGraphQL Plugin must be enabled in the WORDPRESS CMS
   if (API_URL) {
     const res: Response = await fetch(API_URL, {
