@@ -4,7 +4,6 @@ specifiers:
   '@commitlint/cli': ^17.7.1
   '@graphql-codegen/cli': ^5.0.0
   '@graphql-codegen/client-preset': 4.1.0
-  '@tanstack/react-query': ^4.33.0
   '@types/node': 20.5.6
   '@types/react': 18.2.21
   '@types/react-dom': 18.2.7
@@ -26,7 +25,6 @@ specifiers:
 
 dependencies:
   '@graphql-codegen/cli': 5.0.0_saakewcqrvw5ecol2nqgnkrhx4
-  '@tanstack/react-query': 4.35.3_biqbaboplfbrettd7655fr4n2y
   '@types/node': 20.5.6
   '@types/react': 18.2.21
   '@types/react-dom': 18.2.7
@@ -1646,28 +1644,6 @@ packages:
     resolution: {integrity: sha512-sJ902EfIzn1Fa+qYmjdQqh8tPsoxyBz+8yBKC2HKUxyezKJFwPGOn7pv4WY6QuQW//ySQi5lJjA/ZT9sNWWNTg==}
     dependencies:
       tslib: 2.6.2
-    dev: false
-
-  /@tanstack/query-core/4.35.3:
-    resolution: {integrity: sha512-PS+WEjd9wzKTyNjjQymvcOe1yg8f3wYc6mD+vb6CKyZAKvu4sIJwryfqfBULITKCla7P9C4l5e9RXePHvZOZeQ==}
-    dev: false
-
-  /@tanstack/react-query/4.35.3_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-UgTPioip/rGG3EQilXfA2j4BJkhEQsR+KAbF+KIuvQ7j4MkgnTCJF01SfRpIRNtQTlEfz/+IL7+jP8WA8bFbsw==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-native: '*'
-    peerDependenciesMeta:
-      react-dom:
-        optional: true
-      react-native:
-        optional: true
-    dependencies:
-      '@tanstack/query-core': 4.35.3
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-      use-sync-external-store: 1.2.0_react@18.2.0
     dev: false
 
   /@tsconfig/node10/1.0.9:
@@ -5809,14 +5785,6 @@ packages:
 
   /urlpattern-polyfill/9.0.0:
     resolution: {integrity: sha512-WHN8KDQblxd32odxeIgo83rdVDE2bvdkb86it7bMhYZwWKJz0+O0RK/eZiHYnM+zgt/U7hAHOlCQGfjjvSkw2g==}
-    dev: false
-
-  /use-sync-external-store/1.2.0_react@18.2.0:
-    resolution: {integrity: sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-    dependencies:
-      react: 18.2.0
     dev: false
 
   /util-deprecate/1.0.2:
