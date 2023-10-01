@@ -1,19 +1,19 @@
-import { GetAllPagesQuery, Page } from '@/@types/global.ts/graphql';
+import { GetAllPagesQuery, PageQueryBasicCtrlj } from '@/@types/global.ts/graphql';
 import { NotAvailableData } from '@/lib/constants';
 
 
-const pagesResponseToPages = (response: GetAllPagesQuery): GetAllPagesQuery => {
+const pagesResponseToPages = (response: GetAllPagesQuery): PageQueryBasicCtrlj[] => {
     if (!response.pages) {
         throw new Error(NotAvailableData);
     }
 
     return response.pages.edges.map(nodes => {
-        const { __typename, title, content, slug } = nodes.node
+        const { __typename, title, content, slug } = nodes.nodeTy
         return {
-            __typename: __typename,
             title: title,
             content: content,
             slug: slug,
+            __typename: 'PageQueryBasicCtrlj'
         }
     })
 }

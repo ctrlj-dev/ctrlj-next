@@ -4,7 +4,6 @@ import { Suspense, useEffect } from 'react'
 export default async function Page() {
     const data = await getAllPages();
 
-
     if (!data) {
         <h2>no hay datos</h2>
     }
@@ -15,7 +14,7 @@ export default async function Page() {
             <Suspense fallback={<p>cargando</p>}>
                 {data.map(page => {
                     return (
-                        <div>
+                        <div key={page.slug}>
                             <p>{page.title}</p>
                             <p>{page.content}</p>
                             <p>{page.slug}</p>
