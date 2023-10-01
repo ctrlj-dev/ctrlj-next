@@ -8,7 +8,7 @@ const pagesResponseToPages = (response: GetAllPagesQuery): PageQueryBasicCtrlj[]
     }
 
     return response.pages.edges.map(nodes => {
-        const { __typename, title, content, slug } = nodes.nodeTy
+        const { __typename, title, content, slug } = nodes.node
         return {
             title: title,
             content: content,
