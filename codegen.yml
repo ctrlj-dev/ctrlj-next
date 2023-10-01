@@ -1,0 +1,9 @@
+overwrite: true
+schema: ['https://ctrlj.es/graphql', './src/**/*/*.graphql']
+documents: 'src/**/*.graphql'
+generates:
+  ./src/@types/global.ts/:
+    preset: 'client'
+    plugins:
+      - typescript # Generates based types based on your schema
+      - typescript-resolvers
