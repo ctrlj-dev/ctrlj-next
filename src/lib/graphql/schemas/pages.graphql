@@ -1,0 +1,6 @@
+type PageContent {
+  title: String
+  content: String
+  slug: String
+}
+
