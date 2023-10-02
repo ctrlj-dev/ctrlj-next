@@ -1,4 +1,4 @@
-type PageQueryBasicCtrlj {
+type ExampleSchema {
   title: String
   slug: String
   content: String

@@ -1,8 +1,8 @@
-import { getAllPages } from "@/lib/graphql/providers/pages";
-import { Suspense, useEffect } from 'react'
+import { exampleProvoder } from "@/lib/graphql/providers/exampleProvider";
+import { Suspense } from 'react'
 
 export default async function Page() {
-    const data = await getAllPages();
+    const data = await exampleProvoder();
 
     if (!data) {
         <h2>no hay datos</h2>

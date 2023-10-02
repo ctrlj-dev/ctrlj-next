@@ -2032,6 +2032,13 @@ export type EnqueuedStylesheetConnectionPageInfo = {
   startCursor?: Maybe<Scalars['String']['output']>;
 };
 
+export type ExampleSchema = {
+  __typename?: 'ExampleSchema';
+  content?: Maybe<Scalars['String']['output']>;
+  slug?: Maybe<Scalars['String']['output']>;
+  title?: Maybe<Scalars['String']['output']>;
+};
+
 /** The general setting type */
 export type GeneralSettings = {
   __typename?: 'GeneralSettings';
@@ -3718,13 +3725,6 @@ export type PageInfo = {
   hasPreviousPage: Scalars['Boolean']['output'];
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
-};
-
-export type PageQueryBasicCtrlj = {
-  __typename?: 'PageQueryBasicCtrlj';
-  content?: Maybe<Scalars['String']['output']>;
-  slug?: Maybe<Scalars['String']['output']>;
-  title?: Maybe<Scalars['String']['output']>;
 };
 
 /** Connection between the Page type and the Comment type */
@@ -9314,13 +9314,13 @@ export type WritingSettings = {
   useSmilies?: Maybe<Scalars['Boolean']['output']>;
 };
 
-export type GetAllPagesQueryVariables = Exact<{ [key: string]: never; }>;
+export type ExampleQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetAllPagesQuery = { __typename?: 'RootQuery', pages?: { __typename?: 'RootQueryToPageConnection', edges: Array<{ __typename?: 'RootQueryToPageConnectionEdge', node: { __typename?: 'Page', title?: string | null, slug?: string | null, content?: string | null } }> } | null };
+export type ExampleQuery = { __typename?: 'RootQuery', pages?: { __typename?: 'RootQueryToPageConnection', edges: Array<{ __typename?: 'RootQueryToPageConnectionEdge', node: { __typename?: 'Page', title?: string | null, slug?: string | null, content?: string | null } }> } | null };
 
 
-export const GetAllPagesDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"GetAllPages"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"pages"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"content"}}]}}]}}]}}]}}]} as unknown as DocumentNode<GetAllPagesQuery, GetAllPagesQueryVariables>;
+export const ExampleDocument = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"query","name":{"kind":"Name","value":"Example"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"pages"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"edges"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"node"},"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"title"}},{"kind":"Field","name":{"kind":"Name","value":"slug"}},{"kind":"Field","name":{"kind":"Name","value":"content"}}]}}]}}]}}]}}]} as unknown as DocumentNode<ExampleQuery, ExampleQueryVariables>;
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
   ID: { input: string; output: string; }
@@ -11343,6 +11343,13 @@ export type EnqueuedStylesheetConnectionPageInfo = {
   startCursor?: Maybe<Scalars['String']['output']>;
 };
 
+export type ExampleSchema = {
+  __typename?: 'ExampleSchema';
+  content?: Maybe<Scalars['String']['output']>;
+  slug?: Maybe<Scalars['String']['output']>;
+  title?: Maybe<Scalars['String']['output']>;
+};
+
 /** The general setting type */
 export type GeneralSettings = {
   __typename?: 'GeneralSettings';
@@ -13029,13 +13036,6 @@ export type PageInfo = {
   hasPreviousPage: Scalars['Boolean']['output'];
   /** When paginating backwards, the cursor to continue. */
   startCursor?: Maybe<Scalars['String']['output']>;
-};
-
-export type PageQueryBasicCtrlj = {
-  __typename?: 'PageQueryBasicCtrlj';
-  content?: Maybe<Scalars['String']['output']>;
-  slug?: Maybe<Scalars['String']['output']>;
-  title?: Maybe<Scalars['String']['output']>;
 };
 
 /** Connection between the Page type and the Comment type */
@@ -18915,6 +18915,7 @@ export type ResolversTypes = {
   EnqueuedStylesheetConnection: ResolverTypeWrapper<ResolversInterfaceTypes<ResolversTypes>['EnqueuedStylesheetConnection']>;
   EnqueuedStylesheetConnectionEdge: ResolverTypeWrapper<ResolversInterfaceTypes<ResolversTypes>['EnqueuedStylesheetConnectionEdge']>;
   EnqueuedStylesheetConnectionPageInfo: ResolverTypeWrapper<ResolversInterfaceTypes<ResolversTypes>['EnqueuedStylesheetConnectionPageInfo']>;
+  ExampleSchema: ResolverTypeWrapper<ExampleSchema>;
   GeneralSettings: ResolverTypeWrapper<GeneralSettings>;
   HierarchicalContentNode: ResolverTypeWrapper<ResolversInterfaceTypes<ResolversTypes>['HierarchicalContentNode']>;
   HierarchicalContentNodeToContentNodeAncestorsConnection: ResolverTypeWrapper<HierarchicalContentNodeToContentNodeAncestorsConnection>;
@@ -18990,7 +18991,6 @@ export type ResolversTypes = {
   PageConnectionPageInfo: ResolverTypeWrapper<ResolversInterfaceTypes<ResolversTypes>['PageConnectionPageInfo']>;
   PageIdType: PageIdType;
   PageInfo: ResolverTypeWrapper<ResolversInterfaceTypes<ResolversTypes>['PageInfo']>;
-  PageQueryBasicCtrlj: ResolverTypeWrapper<PageQueryBasicCtrlj>;
   PageToCommentConnection: ResolverTypeWrapper<PageToCommentConnection>;
   PageToCommentConnectionEdge: ResolverTypeWrapper<PageToCommentConnectionEdge>;
   PageToCommentConnectionPageInfo: ResolverTypeWrapper<PageToCommentConnectionPageInfo>;
@@ -19376,6 +19376,7 @@ export type ResolversParentTypes = {
   EnqueuedStylesheetConnection: ResolversInterfaceTypes<ResolversParentTypes>['EnqueuedStylesheetConnection'];
   EnqueuedStylesheetConnectionEdge: ResolversInterfaceTypes<ResolversParentTypes>['EnqueuedStylesheetConnectionEdge'];
   EnqueuedStylesheetConnectionPageInfo: ResolversInterfaceTypes<ResolversParentTypes>['EnqueuedStylesheetConnectionPageInfo'];
+  ExampleSchema: ExampleSchema;
   GeneralSettings: GeneralSettings;
   HierarchicalContentNode: ResolversInterfaceTypes<ResolversParentTypes>['HierarchicalContentNode'];
   HierarchicalContentNodeToContentNodeAncestorsConnection: HierarchicalContentNodeToContentNodeAncestorsConnection;
@@ -19442,7 +19443,6 @@ export type ResolversParentTypes = {
   PageConnectionEdge: ResolversInterfaceTypes<ResolversParentTypes>['PageConnectionEdge'];
   PageConnectionPageInfo: ResolversInterfaceTypes<ResolversParentTypes>['PageConnectionPageInfo'];
   PageInfo: ResolversInterfaceTypes<ResolversParentTypes>['PageInfo'];
-  PageQueryBasicCtrlj: PageQueryBasicCtrlj;
   PageToCommentConnection: PageToCommentConnection;
   PageToCommentConnectionEdge: PageToCommentConnectionEdge;
   PageToCommentConnectionPageInfo: PageToCommentConnectionPageInfo;
@@ -20392,6 +20392,13 @@ export type EnqueuedStylesheetConnectionPageInfoResolvers<ContextType = any, Par
   startCursor?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
 };
 
+export type ExampleSchemaResolvers<ContextType = any, ParentType extends ResolversParentTypes['ExampleSchema'] = ResolversParentTypes['ExampleSchema']> = {
+  content?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  slug?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  title?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+};
+
 export type GeneralSettingsResolvers<ContextType = any, ParentType extends ResolversParentTypes['GeneralSettings'] = ResolversParentTypes['GeneralSettings']> = {
   dateFormat?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   description?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
@@ -20982,13 +20989,6 @@ export type PageInfoResolvers<ContextType = any, ParentType extends ResolversPar
   hasNextPage?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
   hasPreviousPage?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
   startCursor?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-};
-
-export type PageQueryBasicCtrljResolvers<ContextType = any, ParentType extends ResolversParentTypes['PageQueryBasicCtrlj'] = ResolversParentTypes['PageQueryBasicCtrlj']> = {
-  content?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  slug?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  title?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 };
 
 export type PageToCommentConnectionResolvers<ContextType = any, ParentType extends ResolversParentTypes['PageToCommentConnection'] = ResolversParentTypes['PageToCommentConnection']> = {
@@ -22707,6 +22707,7 @@ export type Resolvers<ContextType = any> = {
   EnqueuedStylesheetConnection?: EnqueuedStylesheetConnectionResolvers<ContextType>;
   EnqueuedStylesheetConnectionEdge?: EnqueuedStylesheetConnectionEdgeResolvers<ContextType>;
   EnqueuedStylesheetConnectionPageInfo?: EnqueuedStylesheetConnectionPageInfoResolvers<ContextType>;
+  ExampleSchema?: ExampleSchemaResolvers<ContextType>;
   GeneralSettings?: GeneralSettingsResolvers<ContextType>;
   HierarchicalContentNode?: HierarchicalContentNodeResolvers<ContextType>;
   HierarchicalContentNodeToContentNodeAncestorsConnection?: HierarchicalContentNodeToContentNodeAncestorsConnectionResolvers<ContextType>;
@@ -22767,7 +22768,6 @@ export type Resolvers<ContextType = any> = {
   PageConnectionEdge?: PageConnectionEdgeResolvers<ContextType>;
   PageConnectionPageInfo?: PageConnectionPageInfoResolvers<ContextType>;
   PageInfo?: PageInfoResolvers<ContextType>;
-  PageQueryBasicCtrlj?: PageQueryBasicCtrljResolvers<ContextType>;
   PageToCommentConnection?: PageToCommentConnectionResolvers<ContextType>;
   PageToCommentConnectionEdge?: PageToCommentConnectionEdgeResolvers<ContextType>;
   PageToCommentConnectionPageInfo?: PageToCommentConnectionPageInfoResolvers<ContextType>;
