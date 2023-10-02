@@ -1,5 +1,6 @@
 import { API_URL, ApiNotDefinedError, FailedToFetchError } from '@/lib/constants';
 import { DocumentNode } from 'graphql/language/ast';
+import { WordpressResponse } from '../types/rest';
 
 async function fetchAPI(query: DocumentNode | string, { variables }: Record<string, any> = {}) {
   let headers = { 'Content-Type': 'application/json' };
@@ -9,7 +10,6 @@ async function fetchAPI(query: DocumentNode | string, { variables }: Record<stri
       ...{ Authorization: `Bearer ${process.env.WORDPRESS_AUTH_REFRESH_TOKEN}`, ...headers },
     };
   }
-
 
   // WPGraphQL Plugin must be enabled in the WORDPRESS CMS
   if (API_URL) {
