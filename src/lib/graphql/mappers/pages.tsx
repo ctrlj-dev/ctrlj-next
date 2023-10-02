@@ -1,10 +1,11 @@
 import { GetAllPagesQuery, PageQueryBasicCtrlj } from '@/@types/global.ts/graphql';
-import { NotAvailableData } from '@/lib/constants';
+import { FailedToFetchError } from '@/lib/constants';
 
 
 const pagesResponseToPages = (response: GetAllPagesQuery): PageQueryBasicCtrlj[] => {
+
     if (!response.pages) {
-        throw new Error(NotAvailableData);
+        throw new Error(FailedToFetchError);
     }
 
     return response.pages.edges.map(nodes => {
