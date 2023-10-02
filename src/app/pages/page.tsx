@@ -1,5 +1,5 @@
 import { exampleProvoder } from "@/lib/graphql/providers/exampleProvider";
-import { Suspense } from 'react'
+import { Suspense } from 'react';
 
 export default async function Page() {
     const data = await exampleProvoder();

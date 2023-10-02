@@ -1,6 +1,5 @@
 import { API_URL, ApiNotDefinedError, FailedToFetchError } from '@/lib/constants';
 import { DocumentNode } from 'graphql/language/ast';
-import { WordpressResponse } from '../types/rest';
 
 async function fetchAPI(query: DocumentNode | string, { variables }: Record<string, any> = {}) {
   let headers = { 'Content-Type': 'application/json' };
