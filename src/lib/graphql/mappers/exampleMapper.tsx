@@ -1,6 +1,5 @@
 import { ExampleQuery, ExampleSchema } from '@/@types/global.ts/graphql';
 import { FailedToFetchError } from '@/lib/constants';
-import { WordpressResponse } from '../types/rest';
 
 
 const exampleQueryResponseToExampleQuery = (response: ExampleQuery): ExampleSchema[] => {
@@ -20,4 +19,4 @@ const exampleQueryResponseToExampleQuery = (response: ExampleQuery): ExampleSche
     })
 }
 
-export { exampleQueryResponseToExampleQuery }
+export { exampleQueryResponseToExampleQuery };

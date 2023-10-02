@@ -1,9 +1,8 @@
-import fetchAPI from '../utils/api';
-import { Example } from '../queries/exampleQuery.graphql';
-import { print } from 'graphql/language/printer';
 import { ExampleQuery, ExampleSchema } from '@/@types/global.ts/graphql';
+import { print } from 'graphql/language/printer';
 import { exampleQueryResponseToExampleQuery } from '../mappers/exampleMapper';
-import { WordpressResponse } from '../types/rest';
+import { Example } from '../queries/exampleQuery.graphql';
+import fetchAPI from '../utils/api';
 
 async function exampleProvoder(): Promise<ExampleSchema[]> {
   const parseQuery = print(Example);
