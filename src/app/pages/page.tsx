@@ -1,8 +1,8 @@
-import { exampleProvoder } from "@/lib/graphql/providers/exampleProvider";
+import { exampleProvider } from "@/lib/graphql/providers/exampleProvider";
 import { Suspense } from 'react';
 
 export default async function Page() {
-    const data = await exampleProvoder();
+    const data = await exampleProvider();
 
     if (!data) {
         <h2>no hay datos</h2>
