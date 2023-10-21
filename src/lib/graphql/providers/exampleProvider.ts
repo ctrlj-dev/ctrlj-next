@@ -4,10 +4,10 @@ import { exampleQueryResponseToExampleQuery } from '../mappers/exampleMapper';
 import { Example } from '../queries/exampleQuery.graphql';
 import fetchAPI from '../utils/api';
 
-async function exampleProvoder(): Promise<ExampleSchema[]> {
+async function exampleProvider(): Promise<ExampleSchema[]> {
   const parseQuery = print(Example);
   const response: ExampleQuery = await fetchAPI(parseQuery);
   return exampleQueryResponseToExampleQuery(response);
 }
 
-export { exampleProvoder };
+export { exampleProvider };
