@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -16,9 +12,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "typeRoots": [
-      "src/@types"
-    ],
     "incremental": true,
     "plugins": [
       {
@@ -27,33 +20,15 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-      "@/types/*": [
-        "@types/*"
-      ],
-      "@graphql/*": [
-        "lib/graphql/*"
-      ],
-      "@mutations/*": [
-        "lib/graphql/mutations/*"
-      ],
-      "@queries/*": [
-        "lib/graphql/queries/*"
-      ],
-      "@components/*": [
-        "components/*"
-      ],
-      "@hooks/*": [
-        "lib/hooks/*"
-      ],
-      "@hocs/*": [
-        "lib/hocs/*"
-      ],
-      "@utils/*": [
-        "lib/utils/*"
-      ]
+      "@/*": ["./src/*"],
+      "@/types/*": ["@types/*"],
+      "@graphql/*": ["lib/graphql/*"],
+      "@mutations/*": ["lib/graphql/mutations/*"],
+      "@queries/*": ["lib/graphql/queries/*"],
+      "@components/*": ["components/*"],
+      "@hooks/*": ["lib/hooks/*"],
+      "@hocs/*": ["lib/hocs/*"],
+      "@utils/*": ["lib/utils/*"]
     }
   },
   "include": [
@@ -66,7 +41,5 @@
     "**/*.json",
     ".next/types/**/*.ts"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }
