@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { exampleResolver } from "@/lib/graphql/resolvers/exampleResolver";
+=======
+import { exampleResolver } from "@/lib/graphql/resolvers/resolvers";
+>>>>>>> 8e3375f (refactor(resolvers): add correct folder nomenclature)
 import { Suspense } from 'react';
 
 export default async function Page() {
