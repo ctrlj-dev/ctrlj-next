@@ -1,6 +1,6 @@
 import { exampleResolver } from "@/lib/graphql/resolvers/exampleResolver";
 import { Suspense } from 'react';
-import ButtonSwitchTheme from "../components/ui/button/ButtonSwitchTheme";
+import { ButtonSwitchTheme } from "@/components/ui/buttons";
 
 export default async function Page() {
     const data = await exampleResolver();
