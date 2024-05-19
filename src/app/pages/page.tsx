@@ -1,5 +1,6 @@
 import { exampleResolver } from "@/lib/graphql/resolvers/exampleResolver";
 import { Suspense } from 'react';
+import ButtonSwitchTheme from "../components/ui/button/ButtonSwitchTheme";
 
 export default async function Page() {
     const data = await exampleResolver();
@@ -11,6 +12,7 @@ export default async function Page() {
     return (
         <div>
             <h1>Mis post</h1>
+            <ButtonSwitchTheme />
             <Suspense fallback={<p>cargando</p>}>
                 {data.map(page => {
                     return (
