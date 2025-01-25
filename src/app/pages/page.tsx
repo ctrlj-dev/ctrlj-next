@@ -2,6 +2,7 @@ import { exampleResolver } from "@/lib/graphql/resolvers/exampleResolver";
 import { Suspense } from 'react';
 
 export default async function Page() {
+    // dummy query test
     const data = await exampleResolver();
 
     if (!data) {
